@@ -18,44 +18,26 @@ public class Animal {
         this.nombre = nombre;
     }
 
-    /**
-     * @return the apellido
-     */
     public ArrayList<String> getApellido() {
         return apellido;
     }
 
-    /**
-     * @param apellido the apellido to set
-     */
     public void setApellido(ArrayList<String> apellido) {
         this.apellido = apellido;
     }
 
-    /**
-     * @return the edad
-     */
     public ArrayList<Integer> getEdad() {
         return edad;
     }
 
-    /**
-     * @param edad the edad to set
-     */
     public void setEdad(ArrayList<Integer> edad) {
         this.edad = edad;
     }
 
-    /**
-     * @return the direccion
-     */
     public ArrayList<String> getDireccion() {
         return direccion;
     }
 
-    /**
-     * @param direccion the direccion to set
-     */
     public void setDireccion(ArrayList<String> direccion) {
         this.direccion = direccion;
     }
