@@ -1,5 +1,4 @@
 package Sistema;
-
 import javax.swing.table.DefaultTableModel;
 
 /** * * @author RAUL */

@@ -1,7 +1,5 @@
 package Sistema;
-
 import javax.swing.JOptionPane;
-
 /** * * @author RAUL */
 public class Formulario01 extends javax.swing.JInternalFrame {
 
@@ -129,8 +127,6 @@ public class Formulario01 extends javax.swing.JInternalFrame {
 
         }
     }//GEN-LAST:event_btninicioActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField Contraseña;
     private javax.swing.JButton btninicio;

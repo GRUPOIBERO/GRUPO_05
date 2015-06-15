@@ -1,10 +1,5 @@
-
 package Clases;
-
-/**
- *
- * @author RAUL
- */
+/** * * @author RAUL */
 public class Distritos {
     
 }
