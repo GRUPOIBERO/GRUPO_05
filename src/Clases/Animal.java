@@ -14,9 +14,6 @@ public class Animal {
         return nombre;
     }
 
-    /**
-     * @param nombre the nombre to set
-     */
     public void setNombre(ArrayList<String> nombre) {
         this.nombre = nombre;
     }
