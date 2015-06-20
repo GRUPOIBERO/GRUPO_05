@@ -3,6 +3,7 @@ package Sistema;
  *
  * @author RAUL
  */
+
 public class Principal extends javax.swing.JFrame {
 
     public Principal() {
