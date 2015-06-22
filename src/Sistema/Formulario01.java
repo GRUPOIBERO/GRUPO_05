@@ -28,7 +28,7 @@ public class Formulario01 extends javax.swing.JInternalFrame {
         lblpassword.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         lblpassword.setText("PASSWORD");
 
-        btninicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Sistema/inicio.jpeg"))); // NOI18N
+        btninicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inicio.jpeg"))); // NOI18N
         btninicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btninicioActionPerformed(evt);
@@ -90,7 +90,7 @@ public class Formulario01 extends javax.swing.JInternalFrame {
                     + "Has ingresado satisfactoriamente al sistema", "Mensaje de bienvenida",
                     JOptionPane.INFORMATION_MESSAGE);
 
-            Formulario2 a = new Formulario2();
+        Formulario2 a = new Formulario2();
         a.setVisible(true);
 
         } else {
