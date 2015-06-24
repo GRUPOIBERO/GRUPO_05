@@ -90,7 +90,7 @@ public class Formulario01 extends javax.swing.JInternalFrame {
                     + "Has ingresado satisfactoriamente al sistema", "Mensaje de bienvenida",
                     JOptionPane.INFORMATION_MESSAGE);
 
-        Formulario2 a = new Formulario2();
+        Formulario02 a = new Formulario02();
         a.setVisible(true);
 
         } else {
