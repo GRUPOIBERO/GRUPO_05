@@ -51,6 +51,7 @@ public class DatosClientes extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("DATOS GUARDADOS DE LOS CLIENTES");
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 255));
 

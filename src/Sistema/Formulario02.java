@@ -40,14 +40,13 @@ public class Formulario02 extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnver = new javax.swing.JButton();
 
         jTextField4.setText("jTextField4");
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        setResizable(true);
         setTitle("REGISTRO DE CLIENTES");
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -91,7 +90,12 @@ public class Formulario02 extends javax.swing.JInternalFrame {
 
         jButton4.setText("IR A MENU");
 
-        jButton6.setText("VER DATOS GUARDADOS");
+        btnver.setText("VER DATOS GUARDADOS");
+        btnver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -141,7 +145,7 @@ public class Formulario02 extends javax.swing.JInternalFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnver, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(216, 216, 216))
         );
         jPanel2Layout.setVerticalGroup(
@@ -171,7 +175,7 @@ public class Formulario02 extends javax.swing.JInternalFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4))
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btnver)
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -236,15 +240,22 @@ public class Formulario02 extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_cbDistritoActionPerformed
 
+    private void btnverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnverActionPerformed
+        DatosClientes ven= new DatosClientes();
+        FRMDIPrincipal.escritorio.add(ven);
+        ven.toFront();
+        ven.setVisible(true);
+    }//GEN-LAST:event_btnverActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnver;
     private javax.swing.JComboBox cbDistrito;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField4;
