@@ -1,5 +1,6 @@
 package Sistema;
 
+import AlmacenDatos.DatosClientes;
 import Clases.Cliente;
 import Clases.Distritos;
 import java.util.LinkedList;
@@ -89,7 +90,12 @@ public class Formulario02 extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton3.setText("MODIFICAR");
+        jButton3.setText("ACTUALIZAR DATOS");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("IR A MENU");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -137,14 +143,13 @@ public class Formulario02 extends javax.swing.JInternalFrame {
                                         .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jButton3)))
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE)
                                         .addComponent(lbldni, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtdni))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
                                         .addComponent(btnver)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jButton4)
@@ -180,7 +185,7 @@ public class Formulario02 extends javax.swing.JInternalFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(btnver))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -235,6 +240,7 @@ public class Formulario02 extends javax.swing.JInternalFrame {
         txtapellidos.setText("");
         txtdireccion.setText("");
         txtdni.setText("");
+        cbDistrito.setSelectedItem("");
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void cbDistritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDistritoActionPerformed
@@ -246,7 +252,7 @@ public class Formulario02 extends javax.swing.JInternalFrame {
 
     private void btnverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnverActionPerformed
         DatosClientes ven= new DatosClientes();
-        FRMDIPrincipal.escritorio.add(ven);
+        Principal.escritorio.add(ven);
         ven.toFront();
         ven.setVisible(true);
     }//GEN-LAST:event_btnverActionPerformed
@@ -276,6 +282,23 @@ public class Formulario02 extends javax.swing.JInternalFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       //obtenemos los datos del cliente
+        String nombre = txtnombre.getText();
+        String apellido = txtapellidos.getText();
+        String documento = txtdni.getText();
+        String direccion = txtdireccion.getText();
+        String distrito = (String) cbDistrito.getSelectedItem();
+        Cliente cliente = new Cliente(nombre, apellido, documento, direccion, distrito);
+        contenedor.set(encontrado,cliente);
+        //limpiuamos los controles
+        txtnombre.setText("");
+        txtapellidos.setText("");
+        txtdireccion.setText("");
+        txtdni.setText("");
+        cbDistrito.setSelectedItem("");
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

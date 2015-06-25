@@ -1,7 +1,7 @@
 
 package Login;
-
-import Sistema.FRMDIPrincipal;
+ 
+import Sistema.Principal;
 import javax.swing.JOptionPane;
 
 /**
@@ -124,8 +124,8 @@ public class Login extends javax.swing.JFrame {
                     + "Has ingresado satisfactoriamente al sistema", "Mensaje de bienvenida",
                     JOptionPane.INFORMATION_MESSAGE);
        
-        FRMDIPrincipal a= new FRMDIPrincipal();
-       a.setVisible(true);
+            Principal a= new Principal();
+            a.setVisible(true);
 
         } else {
 
