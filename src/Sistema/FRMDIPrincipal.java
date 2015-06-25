@@ -31,7 +31,6 @@ public class FRMDIPrincipal extends javax.swing.JFrame {
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -74,14 +73,6 @@ public class FRMDIPrincipal extends javax.swing.JFrame {
         });
         fileMenu.add(jMenuItem4);
 
-        jMenuItem5.setText("VER DATOS");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        fileMenu.add(jMenuItem5);
-
         menuBar.add(fileMenu);
 
         setJMenuBar(menuBar);
@@ -108,12 +99,6 @@ public class FRMDIPrincipal extends javax.swing.JFrame {
            escritorio.add(a);
            a.show();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-      DatosClientes a= new DatosClientes();
-      escritorio.add(a);
-      a.show();
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     public static void main(String args[]) {
        
@@ -155,7 +140,6 @@ public class FRMDIPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPopupMenu jPopupMenu1;
