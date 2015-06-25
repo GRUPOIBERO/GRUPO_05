@@ -1,4 +1,5 @@
 package Sistema;
+
 /**
  *
  * @author RAUL
@@ -95,13 +96,13 @@ public class FRMDIPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_fileMenuActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-           Formulario02 a= new Formulario02();
-           escritorio.add(a);
-           a.show();
+        Formulario02 a = new Formulario02();
+        escritorio.add(a);
+        a.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     public static void main(String args[]) {
-       
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
