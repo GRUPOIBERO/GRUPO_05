@@ -9,31 +9,31 @@ import java.util.ArrayList;
  *
  * @author RAUL
  */
-public class PersistenciaCliente {
-    public static void SaveData(ArrayList<Cliente> listaClientes) {
+public class Persistenciapersona {
+    public static void SaveData(ArrayList<Persona> listaP) {
         try {
-            FileOutputStream file = new FileOutputStream("Cliente");
+            FileOutputStream file = new FileOutputStream("lista de personas");
             ObjectOutputStream stream = new ObjectOutputStream(file);
-            stream.writeObject(listaClientes);
+            stream.writeObject(listaP);
             stream.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
     
-    public static ArrayList<Cliente> LoadData() {
-        ArrayList<Cliente> listaClientes = null;
+    public static ArrayList<Persona> LoadData() {
+        ArrayList<Persona> listaP = null;
         try {
             FileInputStream file = new FileInputStream("Paciente");
             ObjectInputStream stream = new ObjectInputStream(file);
-            listaClientes = (ArrayList<Cliente>) stream.readObject();
+            listaP = (ArrayList<Persona>) stream.readObject();
             stream.close();
         } catch (Exception e) {
             e.printStackTrace();
-            listaClientes = null;
+            listaP = null;
         }        
-        return (listaClientes!=null)? listaClientes : 
-                                new ArrayList<Cliente>();             
+        return (listaP!=null)? listaP : 
+                                new ArrayList<Persona>();             
     }
     
 }
