@@ -262,7 +262,7 @@ public class Formulario02 extends javax.swing.JInternalFrame {
             Cliente p;
             for (int i = 0; i < contenedor.size(); i++) {
                 p = (Cliente) contenedor.get(i);
-                if (codigocopiado.equals(p.getNombre())) {
+                if (codigocopiado.equalsIgnoreCase(p.getNombre())) {
                     txtnombre.setText(p.getNombre());
                     txtapellidos.setText(p.getApellido());
                     txtdni.setText(p.getDocumento());
