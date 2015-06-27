@@ -7,17 +7,30 @@
         <Menu class="javax.swing.JMenu" name="fileMenu">
           <Properties>
             <Property name="mnemonic" type="int" value="102"/>
-            <Property name="text" type="java.lang.String" value="MENU  CLIENTES"/>
+            <Property name="text" type="java.lang.String" value="MENU  DE REGISTRO"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="openMenuItem">
+            <MenuItem class="javax.swing.JMenuItem" name="registrodeClientes">
               <Properties>
                 <Property name="mnemonic" type="int" value="111"/>
                 <Property name="text" type="java.lang.String" value="REGISTRO DE CLIENTES"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openMenuItemActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registrodeClientesActionPerformed"/>
               </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="resgistroPersonas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="REGISTRO DE PERSONAS"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resgistroPersonasActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="registroAnimales">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="REGISTRO DE ANIMALES"/>
+              </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="exitMenuItem">
               <Properties>
@@ -30,38 +43,6 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="editMenu">
-          <Properties>
-            <Property name="mnemonic" type="int" value="101"/>
-            <Property name="text" type="java.lang.String" value="MENU ANIMALES"/>
-          </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="cutMenuItem">
-              <Properties>
-                <Property name="mnemonic" type="int" value="116"/>
-                <Property name="text" type="java.lang.String" value="Cut"/>
-              </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="copyMenuItem">
-              <Properties>
-                <Property name="mnemonic" type="int" value="121"/>
-                <Property name="text" type="java.lang.String" value="Copy"/>
-              </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="pasteMenuItem">
-              <Properties>
-                <Property name="mnemonic" type="int" value="112"/>
-                <Property name="text" type="java.lang.String" value="Paste"/>
-              </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="deleteMenuItem">
-              <Properties>
-                <Property name="mnemonic" type="int" value="100"/>
-                <Property name="text" type="java.lang.String" value="Delete"/>
-              </Properties>
-            </MenuItem>
-          </SubComponents>
-        </Menu>
         <Menu class="javax.swing.JMenu" name="helpMenu">
           <Properties>
             <Property name="mnemonic" type="int" value="104"/>
@@ -71,13 +52,18 @@
             <MenuItem class="javax.swing.JMenuItem" name="contentMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="99"/>
-                <Property name="text" type="java.lang.String" value="Contents"/>
+                <Property name="text" type="java.lang.String" value="REGISTRAR CITAS"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="aboutMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="97"/>
-                <Property name="text" type="java.lang.String" value="About"/>
+                <Property name="text" type="java.lang.String" value="REGISTRAR  DE FECHA DE VACUNACION"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="REGISTRAR HISTORIAL MEDICO /ENFERMEDADES"/>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -113,7 +99,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="escritorio" pref="534" max="32767" attributes="0"/>
+          <Component id="escritorio" pref="363" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>

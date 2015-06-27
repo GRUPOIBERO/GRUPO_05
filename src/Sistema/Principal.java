@@ -1,5 +1,8 @@
 package Sistema;
 
+import Formularios.Formulario03;
+import Formularios.Formulario02;
+
 
 /**
  *
@@ -24,30 +27,39 @@ public class Principal extends javax.swing.JFrame {
         escritorio = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
-        openMenuItem = new javax.swing.JMenuItem();
+        registrodeClientes = new javax.swing.JMenuItem();
+        resgistroPersonas = new javax.swing.JMenuItem();
+        registroAnimales = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
-        editMenu = new javax.swing.JMenu();
-        cutMenuItem = new javax.swing.JMenuItem();
-        copyMenuItem = new javax.swing.JMenuItem();
-        pasteMenuItem = new javax.swing.JMenuItem();
-        deleteMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         fileMenu.setMnemonic('f');
-        fileMenu.setText("MENU  CLIENTES");
+        fileMenu.setText("MENU  DE REGISTRO");
 
-        openMenuItem.setMnemonic('o');
-        openMenuItem.setText("REGISTRO DE CLIENTES");
-        openMenuItem.addActionListener(new java.awt.event.ActionListener() {
+        registrodeClientes.setMnemonic('o');
+        registrodeClientes.setText("REGISTRO DE CLIENTES");
+        registrodeClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                openMenuItemActionPerformed(evt);
+                registrodeClientesActionPerformed(evt);
             }
         });
-        fileMenu.add(openMenuItem);
+        fileMenu.add(registrodeClientes);
+
+        resgistroPersonas.setText("REGISTRO DE PERSONAS");
+        resgistroPersonas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resgistroPersonasActionPerformed(evt);
+            }
+        });
+        fileMenu.add(resgistroPersonas);
+
+        registroAnimales.setText("REGISTRO DE ANIMALES");
+        fileMenu.add(registroAnimales);
 
         exitMenuItem.setMnemonic('x');
         exitMenuItem.setText("Exit");
@@ -60,37 +72,19 @@ public class Principal extends javax.swing.JFrame {
 
         menuBar.add(fileMenu);
 
-        editMenu.setMnemonic('e');
-        editMenu.setText("MENU ANIMALES");
-
-        cutMenuItem.setMnemonic('t');
-        cutMenuItem.setText("Cut");
-        editMenu.add(cutMenuItem);
-
-        copyMenuItem.setMnemonic('y');
-        copyMenuItem.setText("Copy");
-        editMenu.add(copyMenuItem);
-
-        pasteMenuItem.setMnemonic('p');
-        pasteMenuItem.setText("Paste");
-        editMenu.add(pasteMenuItem);
-
-        deleteMenuItem.setMnemonic('d');
-        deleteMenuItem.setText("Delete");
-        editMenu.add(deleteMenuItem);
-
-        menuBar.add(editMenu);
-
         helpMenu.setMnemonic('h');
         helpMenu.setText("MENU CITAS");
 
         contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Contents");
+        contentMenuItem.setText("REGISTRAR CITAS");
         helpMenu.add(contentMenuItem);
 
         aboutMenuItem.setMnemonic('a');
-        aboutMenuItem.setText("About");
+        aboutMenuItem.setText("REGISTRAR  DE FECHA DE VACUNACION");
         helpMenu.add(aboutMenuItem);
+
+        jMenuItem3.setText("REGISTRAR HISTORIAL MEDICO /ENFERMEDADES");
+        helpMenu.add(jMenuItem3);
 
         menuBar.add(helpMenu);
 
@@ -104,7 +98,7 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
+            .addComponent(escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 363, Short.MAX_VALUE)
         );
 
         pack();
@@ -114,21 +108,20 @@ public class Principal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
-    private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
+    private void registrodeClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrodeClientesActionPerformed
          Formulario02 a= new Formulario02();
         escritorio.add(a);
         a.setVisible(true);
-    }//GEN-LAST:event_openMenuItemActionPerformed
+    }//GEN-LAST:event_registrodeClientesActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void resgistroPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resgistroPersonasActionPerformed
+        Formulario03 a = new Formulario03();
+        escritorio.add(a);
+        a.setVisible(true);
+    }//GEN-LAST:event_resgistroPersonasActionPerformed
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -145,9 +138,7 @@ public class Principal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
@@ -158,17 +149,15 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem contentMenuItem;
-    private javax.swing.JMenuItem copyMenuItem;
-    private javax.swing.JMenuItem cutMenuItem;
-    private javax.swing.JMenuItem deleteMenuItem;
-    private javax.swing.JMenu editMenu;
     public static javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenuItem openMenuItem;
-    private javax.swing.JMenuItem pasteMenuItem;
+    private javax.swing.JMenuItem registroAnimales;
+    private javax.swing.JMenuItem registrodeClientes;
+    private javax.swing.JMenuItem resgistroPersonas;
     // End of variables declaration//GEN-END:variables
 
 }

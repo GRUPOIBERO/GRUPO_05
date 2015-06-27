@@ -1,8 +1,9 @@
-package Sistema;
+package Formularios;
 
 import AlmacenDatos.DatosClientes;
 import Clases.Cliente;
 import Clases.Distritos;
+import Sistema.Principal;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;

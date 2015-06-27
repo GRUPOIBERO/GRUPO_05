@@ -7,14 +7,10 @@ public class Persona implements Serializable {
      private String apellido;
      private int edad;
      private String dni;
-
-    public Persona(String nombre, String apellido, int edad, String dni) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.dni = dni;
-    }
-
+     private String telefono;
+     private String movil;
+     private String sexo;
+     
     public String getNombre() {
         return nombre;
     }
@@ -45,6 +41,43 @@ public class Persona implements Serializable {
 
     public void setDni(String dni) {
         this.dni = dni;
+    }
+
+   
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    /**
+     * @return the movil
+     */
+    public String getMovil() {
+        return movil;
+    }
+
+    /**
+     * @param movil the movil to set
+     */
+    public void setMovil(String movil) {
+        this.movil = movil;
+    }
+
+    /**
+     * @return the sexo
+     */
+    public String getSexo() {
+        return sexo;
+    }
+
+    /**
+     * @param sexo the sexo to set
+     */
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     
