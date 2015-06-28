@@ -12,7 +12,7 @@ import persistencias.Persistenciapersona;
  */
 public class Formulario03 extends javax.swing.JInternalFrame {
 
-    int con = 0;
+   
 
     public Formulario03() {
         initComponents();
