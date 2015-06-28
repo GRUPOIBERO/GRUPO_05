@@ -1,7 +1,10 @@
 package Clases;
 
 import java.io.Serializable;
-
+/**
+ * 
+ * @author YESSENIA MONTALVO
+ */
 public class Persona implements Serializable {
      private String nombre;
      private String apellido;

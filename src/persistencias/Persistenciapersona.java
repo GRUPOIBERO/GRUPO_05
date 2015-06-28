@@ -1,4 +1,5 @@
- package Clases;
+ package persistencias;
+import Clases.Persona;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -6,13 +7,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 /**
- *
- * @author RAUL
+ * 
+ * @author YESSENIA MONTALVO
  */
 public class Persistenciapersona {
     public static void SaveData(ArrayList<Persona> listaP) {
         try {
-            FileOutputStream file = new FileOutputStream("lista de personas");
+            FileOutputStream file = new FileOutputStream("personas.ser");
             ObjectOutputStream stream = new ObjectOutputStream(file);
             stream.writeObject(listaP);
             stream.close();
@@ -24,7 +25,7 @@ public class Persistenciapersona {
     public static ArrayList<Persona> LoadData() {
         ArrayList<Persona> listaP = null;
         try {
-            FileInputStream file = new FileInputStream("Paciente");
+            FileInputStream file = new FileInputStream("Persona.ser");
             ObjectInputStream stream = new ObjectInputStream(file);
             listaP = (ArrayList<Persona>) stream.readObject();
             stream.close();

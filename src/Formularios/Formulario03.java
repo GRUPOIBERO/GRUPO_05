@@ -5,14 +5,38 @@ import Sistema.Principal;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+import persistencias.Persistenciapersona;
+/**
+ * 
+ * @author YESSENIA MONTALVO
+ */
 public class Formulario03 extends javax.swing.JInternalFrame {
 
     int con = 0;
 
     public Formulario03() {
         initComponents();
+        LimpiarTabla();
+       LlenarTable();
+       
+    }
+     void LimpiarTabla() {
+        DefaultTableModel df = (DefaultTableModel) datos.getModel();
+        int a = df.getRowCount() - 1;
+        for (int i = a; i >= 0; i--) {
+            df.removeRow(i);
+        }
 
+    }
+
+    public void LlenarTable() {
+        LimpiarTabla();
+        ArrayList<Persona> listaPersona = Persistenciapersona.LoadData();
+        DefaultTableModel df = ((DefaultTableModel) datos.getModel());
+         for (Persona p : listaPersona) {
+            df.addRow(new Object[]{p.getNombre(), p.getApellido(), p.getEdad(), p.getDni(), p.getSexo(), p.getTelefono(), p.getMovil()});
+            }
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -191,7 +215,8 @@ public class Formulario03 extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        DefaultTableModel model = (DefaultTableModel) datos.getModel();
+        LimpiarTabla();
+        ArrayList<Persona> listaUsuario = Persistenciapersona.LoadData();
         Persona p = new Persona();
         p.setNombre(txtnombre.getText());
         p.setApellido(txtapellido.getText());
@@ -200,8 +225,8 @@ public class Formulario03 extends javax.swing.JInternalFrame {
         p.setTelefono(txttelefono.getText());
         p.setMovil(txtcelular.getText());
         p.setSexo((String) cbSexo.getSelectedItem());
-        model.addRow(new Object[]{p.getNombre(), p.getApellido(), p.getEdad(), p.getDni(), p.getSexo(), p.getTelefono(), p.getMovil()});
-
+        listaUsuario.add(p);
+        Persistenciapersona.SaveData(listaUsuario);
         //limpiamos los controles
         txtnombre.setText("");
         txtapellido.setText("");
@@ -210,6 +235,8 @@ public class Formulario03 extends javax.swing.JInternalFrame {
         txttelefono.setText("");
         cbedad.setSelectedItem(0);
         cbSexo.setSelectedItem(0);
+        
+        LlenarTable();
     }//GEN-LAST:event_btnInsertarActionPerformed
 
     private void cbedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbedadActionPerformed

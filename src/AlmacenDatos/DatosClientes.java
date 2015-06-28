@@ -7,7 +7,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author RAUL
+ * @author 
  */
 public class DatosClientes extends javax.swing.JInternalFrame {
 

@@ -1,7 +1,7 @@
 package Clases;
 /**
  *
- * @author RAUL
+ * @author 
  */
 public enum Distritos {
     Miraflores(""),
