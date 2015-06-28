@@ -1,6 +1,6 @@
 package Sistema;
 
-import Formularios.Formulario03;
+
 import Formularios.Formulario02;
 
 
@@ -115,9 +115,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_registrodeClientesActionPerformed
 
     private void resgistroPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resgistroPersonasActionPerformed
-        Formulario03 a = new Formulario03();
-        escritorio.add(a);
-        a.setVisible(true);
+       
     }//GEN-LAST:event_resgistroPersonasActionPerformed
 
     public static void main(String args[]) {
