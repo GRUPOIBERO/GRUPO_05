@@ -3,6 +3,7 @@ package AlmacenDatos;
 import Clases.Cliente;
 import Formularios.Formulario02;
 import Sistema.Principal;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -18,6 +19,15 @@ public class DatosClientes extends javax.swing.JInternalFrame {
         initComponents();
         MostrarDatos1();
         MostrarDatos();
+    }
+    
+    void LimpiarTabla() {
+        DefaultTableModel df = (DefaultTableModel) datos.getModel();
+        int a = df.getRowCount() - 1;
+        for (int i = a; i >= 0; i--) {
+            df.removeRow(i);
+        }
+
     }
 
     public void MostrarDatos1() {
@@ -161,7 +171,12 @@ public class DatosClientes extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
-        model.removeRow(con);
+        int elim= datos.getSelectedRowCount()-1;
+        if(elim >=0){
+            model.removeRow(elim);
+        }else{
+            JOptionPane.showMessageDialog(this,"NO HAY DATOS ");
+        }
     }//GEN-LAST:event_btneliminarActionPerformed
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
@@ -172,7 +187,7 @@ public class DatosClientes extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        datos.clearSelection();
+        LimpiarTabla();
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

@@ -1,8 +1,8 @@
 package Sistema;
 
-
 import Formularios.Formulario02;
-
+import Formularios.Formulario03;
+import Formularios.Formulario04;
 
 /**
  *
@@ -59,6 +59,11 @@ public class Principal extends javax.swing.JFrame {
         fileMenu.add(resgistroPersonas);
 
         registroAnimales.setText("REGISTRO DE ANIMALES");
+        registroAnimales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registroAnimalesActionPerformed(evt);
+            }
+        });
         fileMenu.add(registroAnimales);
 
         exitMenuItem.setMnemonic('x');
@@ -109,17 +114,25 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
     private void registrodeClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrodeClientesActionPerformed
-         Formulario02 a= new Formulario02();
+        Formulario02 a = new Formulario02();
         escritorio.add(a);
         a.setVisible(true);
     }//GEN-LAST:event_registrodeClientesActionPerformed
 
     private void resgistroPersonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resgistroPersonasActionPerformed
-       
+        Formulario03 a = new Formulario03();
+        escritorio.add(a);
+        a.setVisible(true);
     }//GEN-LAST:event_resgistroPersonasActionPerformed
 
+    private void registroAnimalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroAnimalesActionPerformed
+        Formulario04 a = new Formulario04();
+        escritorio.add(a);
+        a.setVisible(true);
+    }//GEN-LAST:event_registroAnimalesActionPerformed
+
     public static void main(String args[]) {
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -136,7 +149,7 @@ public class Principal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-       
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);

@@ -1,46 +1,62 @@
 package Clases;
-import java.util.ArrayList;
-/** * * @author RAUL */
-public class Animal {
-     private ArrayList<String> nombre = new ArrayList<String>();
-    private ArrayList<String> apellido = new ArrayList<String>();
-    private ArrayList<Integer> edad= new ArrayList<Integer>();
-    private ArrayList<String> direccion = new ArrayList<String>();
 
-    public Animal() {
-    }
+import java.io.Serializable;
 
-    public ArrayList<String> getNombre() {
+public class Animal implements Serializable {
+
+    private int codigo;
+    private String nombre;
+    private String raza;
+    private String color;
+    private String sexo;
+    private String tipo;
+
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(ArrayList<String> nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public ArrayList<String> getApellido() {
-        return apellido;
+    public String getRaza() {
+        return raza;
     }
 
-    public void setApellido(ArrayList<String> apellido) {
-        this.apellido = apellido;
+    public void setRaza(String raza) {
+        this.raza = raza;
     }
 
-    public ArrayList<Integer> getEdad() {
-        return edad;
+    public String getColor() {
+        return color;
     }
 
-    public void setEdad(ArrayList<Integer> edad) {
-        this.edad = edad;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public ArrayList<String> getDireccion() {
-        return direccion;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setDireccion(ArrayList<String> direccion) {
-        this.direccion = direccion;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
-    
-    
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
 }
